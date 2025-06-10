@@ -1,0 +1,56 @@
+# Docker Commands
+
+docker pull IMAGE_NAME
+docker images
+docker run IMAGE_NAME
+docker run -it IMAGE_NAME
+docker stop CONT_NAME or CONT_ID
+docker start CONT_NAME or CONT_ID
+docker ps 
+docker ps -a
+
+More
+
+docker pull IMAGE_NAME:version
+docker run -d IMAGE_NAME
+docker run --name COUNT_NAME -d IMAGE_NAME
+docker rmi IMAGE_NAME
+docker rmi CONT_NAME
+
+# Troubleshooting Commands
+
+docker logs CONT_ID
+docker exec -it CONT_ID /bin/bash
+or 
+docker exec -it CONT_ID /bin/sh
+
+
+# Docker Network
+
+docker network ls
+docker network create NETWORK_NAME
+
+# name.yaml / Docker Compose
+
+docker -compose -f fileName.yaml up -d
+docker _compose -f fileName-yaml down
+
+# Dockerfile
+
+docker build -t app:1.0 .
+
+# Volumes Cmd
+
+docker volume ls 
+docker volume create VOL_NAME
+docker volume rm VOL_NAME
+
+MORE
+
+docker run -v VOL_NAME:CONT_DIR
+docker run -v MOUNT_PATH
+docker run -v HOST_DIR:CONT_DIR
+
+# To delete host Anonymous Volume
+
+docker volume prune
